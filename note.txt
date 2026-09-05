@@ -1,0 +1,4 @@
+*   Cola de game seleccionados
+*   Ruleta de game aleatorio
+*   Lista de game ===Formato=== Game-Tipo-Tiempo/est-N*Votos-Cola
+*   Peticion de game via wahtsapp
