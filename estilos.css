@@ -1,4 +1,245 @@
+/* --- VARIABLES CYBERPUNK --- */
+:root {
+  --neon-green: #00ff66;
+  --neon-purple: #9d00ff;
+  --neon-blue: #00d9ff;
+  --cyber-black: #05050a;
+  --cyber-dark-blue: #0d111a;
+  --cyber-card-bg: rgba(13, 17, 26, 0.85);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: black;
-  text-color: white;
+  margin: 0;
+  background-color: var(--cyber-black);
+  /* Fondo tecnológico con gradiente y líneas de escaneo */
+  background-image: 
+    radial-gradient(circle at 50% 0%, #1a0033 0%, var(--cyber-black) 70%),
+    linear-gradient(rgba(0, 217, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 217, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 30px 30px, 30px 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
+/* --- HEADER / NAVBAR --- */
+.navbar {
+  background: rgba(5, 5, 10, 0.95);
+  border-bottom: 2px solid var(--neon-purple);
+  box-shadow: 0 0 15px rgba(157, 0, 255, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar-glow {
+  font-size: 1.8rem;
+  border: 2px solid var(--neon-green);
+  box-shadow: 0 0 10px var(--neon-green);
+  border-radius: 50%;
+  padding: 5px 12px;
+  background: var(--cyber-black);
+}
+
+.glitch-title {
+  color: var(--neon-purple);
+  text-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-blue);
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* BOTONES NAVEGACIÓN CYBER */
+.botones-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-cyber {
+  color: var(--neon-blue);
+  text-decoration: none;
+  border: 1px solid var(--neon-blue);
+  background: rgba(0, 217, 255, 0.05);
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  transition: all 0.3s ease;
+}
+
+.btn-cyber:hover {
+  background: var(--neon-blue);
+  color: var(--cyber-black);
+  box-shadow: 0 0 15px var(--neon-blue);
+}
+
+/* --- BANNER --- */
+.banner-cyber {
+  background: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid rgba(0, 255, 102, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 20px;
+}
+
+.cyber-tag {
+  color: var(--neon-green);
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.banner-mensaje {
+  margin: 0;
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+/* --- CONTENEDOR Y SECCIONES --- */
+.contenedor-principal {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.tarjeta-seccion {
+  background: var(--cyber-card-bg);
+  border: 1px solid var(--neon-purple);
+  box-shadow: 0 0 20px rgba(157, 0, 255, 0.15);
+  border-radius: 8px;
+  padding: 25px;
+  backdrop-filter: blur(5px);
+}
+
+.header-seccion h2 {
+  color: var(--neon-green);
+  text-shadow: 0 0 8px rgba(0, 255, 102, 0.5);
+  margin: 0 0 5px 0;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.subtitulo {
+  color: var(--neon-blue);
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* --- ESTILOS DE LA TABLA DE JUEGOS SELECCIONADOS --- */
+.tabla-juegos-wrapper {
+  overflow-x: auto;
+}
+
+.tabla-juegos {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tabla-juegos th {
+  background: rgba(157, 0, 255, 0.2);
+  color: var(--neon-green);
+  padding: 12px 15px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--neon-purple);
+}
+
+.tabla-juegos td {
+  padding: 14px 15px;
+  border-bottom: 1px solid rgba(157, 0, 255, 0.2);
+  font-size: 0.95rem;
+}
+
+.tabla-juegos tbody tr {
+  transition: background 0.2s;
+}
+
+.tabla-juegos tbody tr:hover {
+  background: rgba(0, 217, 255, 0.08);
+}
+
+/* Badges de estado en la tabla */
+.badge-status {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.status-activo {
+  background: rgba(0, 255, 102, 0.15);
+  color: var(--neon-green);
+  border: 1px solid var(--neon-green);
+}
+
+.status-espera {
+  background: rgba(0, 217, 255, 0.15);
+  color: var(--neon-blue);
+  border: 1px solid var(--neon-blue);
+}
+
+/* --- REJILLA CYBER PARA VOTOS --- */
+.grid-votos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+.caja-voto {
+  background: rgba(5, 5, 10, 0.9);
+  border: 1px solid var(--neon-purple);
+  border-radius: 6px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 120px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.caja-voto:hover {
+  border-color: var(--neon-green);
+  box-shadow: 0 0 15px var(--neon-green);
+  transform: translateY(-3px);
+}
+
+.titulo-juego-voto {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.badge-votos-cyber {
+  color: var(--neon-green);
+  background: rgba(0, 255, 102, 0.1);
+  border: 1px solid var(--neon-green);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0, 255, 102, 0.3);
 }

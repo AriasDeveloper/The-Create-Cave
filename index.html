@@ -1,26 +1,74 @@
-<!DOCTRYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Creator Cave - Cyber Interface</title>
   <link rel="stylesheet" href="estilos.css">
-  <title>The Create Cave</title>
 </head>
 <body>
-  <section id="Cola">
-    <h1>Games Seleccionados para esta seccion</h1>
-    <p>Se ordenan segun su cola de prioridad, en caso de dejar juegos en la cola pasaran a la siguiente seccion acumulando prioridad</p>
-    <ol>
-      <li><p>Game 1</p><p>Dura 30/min</p></li>
-      <li><p>Game 2</p><p>Dura 45/min</p></li>
-      <li><p>Game 3</p><p>Dura 15/min</p></li>
-    </ol>
-  </section>
-  <section id="Ruleta">
-  </section>
-  <section id="Lista">
-  </section>
-  <section id="Peticion">
-  </section>
+
+  <!-- CABECERA FUTURISTA -->
+  <header class="navbar">
+    <div class="logo-area">
+      <div class="avatar-glow">😃</div>
+      <h1 class="glitch-title">THE CREATOR CAVE</h1>
+    </div>
+
+    <nav class="botones-nav">
+      <a href="#" class="btn-cyber">GAMER ZONE</a>
+      <a href="#" class="btn-cyber">FOROS</a>
+    </nav>
+  </header>
+
+  <!-- BANNER TIPO CONSOLA DE COMANDOS -->
+  <div class="banner-cyber">
+    <span class="cyber-tag">[SYSTEM_ONLINE]</span>
+    <p class="banner-mensaje">Bienvenido a la red de The Creator Cave // Transmisión en vivo y votación de títulos activos.</p>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="contenedor-principal">
+
+    <!-- SECCIÓN 1: LISTA DETALLADA DE JUEGOS SELECCIONADOS -->
+    <section class="tarjeta-seccion">
+      <div class="header-seccion">
+        <h2>// JUEGOS SELECCIONADOS</h2>
+        <span class="subtitulo">Prioridad de transmisión de la sesión activa y próxima</span>
+      </div>
+      
+      <!-- Lista en formato de tabla Cyberpunk -->
+      <div class="tabla-juegos-wrapper">
+        <table class="tabla-juegos">
+          <thead>
+            <tr>
+              <th># PRIO</th>
+              <th>TÍTULO</th>
+              <th>GÉNERO</th>
+              <th>PLATAFORMA</th>
+              <th>ESTADO</th>
+            </tr>
+          </thead>
+          <tbody id="lista-seleccionados">
+            <!-- Cargado dinámicamente desde JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: COLA DE VOTOS EN REJILLA NEÓN -->
+    <section class="tarjeta-seccion">
+      <div class="header-seccion">
+        <h2>// COLA DE VOTOS</h2>
+        <span class="subtitulo">Módulo de Democracia Cyber: Haz clic para votar</span>
+      </div>
+      
+      <!-- Grid dinámico para votaciones -->
+      <div id="grid-votos" class="grid-votos"></div>
+    </section>
+
+  </main>
+
+  <script src="main.js"></script>
 </body>
 </html>

@@ -2,3 +2,6 @@
 *   Ruleta de game aleatorio
 *   Lista de game ===Formato=== Game-Tipo-Tiempo/est-N*Votos-Cola
 *   Peticion de game via wahtsapp
+*   Colores 1 Negro 2 Azul 3 Morado 4 Verde
+*   Cyber Futurista
+*   Apartado de Juegos jugados con la info de cada partida ademas de foros o discuciones para cada Juegos
